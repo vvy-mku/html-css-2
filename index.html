@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <title>My first web page</title>
+        <style>
+            body {
+                margin: 0;
+            }
+
+            p {
+                color: rgb(64, 159, 72);
+                background-color: rgb(244, 244, 244);
+                color: #65409f;
+                font-size: 20px;
+            }
+            .my_class {
+                background-color: beige;
+            }
+            .my_inputs {
+                background-color: darkgray;
+
+                /* border-color: rgb(0, 0, 0);
+                border-width: 2px;
+                border-style: solid; */
+                border: 2px solid black;
+                border-radius: 10px;
+                
+
+                /* margin: 40px; */
+                /* margin-top: 20px;
+                margin-right: 40px;
+                margin-bottom: 20px;
+                margin-left: 40px; */
+                margin: 20px 40px 20px 40px;
+                padding: 40px 20px 40px 20px
+            }
+
+            .my_button {
+                padding: 20px;
+            }
+
+            input[type="button"] {
+                background-color: blue;
+                color: aliceblue;
+                border: none;
+                padding: 10px 15px 10px 15px;
+                border-radius: 5px;
+            }
+
+            input[type="button"]:hover {
+                background-color: darkblue;
+                color:dimgrey;
+                cursor: pointer;
+            }
+
+            input[type="button"]:active {
+                background-color: lightblue;
+                color: white;
+            }
+
+            a {
+                color: blueviolet;
+            }
+
+            a:visited {
+                color: darkgrey;
+            }
+
+            #my_span {
+                background-color: black;
+                color: white;;
+                padding: 5px;
+            }
+
+            .menu_item {
+                background-color:burlywood;
+                padding: 10px;
+                width: 200px;
+                border-radius: 0 20px 20px 0;
+                margin: 3px 0 3px 0;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <!-- margin -->
+        <div class="my_inputs">
+            <!-- padding -->
+            <input type="text" value="data"/>
+            <input type="password"/>
+            <input type="checkbox"/>
+            <input type="checkbox"/>
+            <input type="radio"/ name="my_radio">
+            <input type="radio"/ name="my_radio">
+            <input type="radio" name="my_radio"/>
+            <input type="file"/>
+            <input type="button" value="Send"/>
+            <textarea></textarea>
+            <div class="my_button">
+                <input type="button" value="Send data" />
+            </div>
+        </div>
+        <div class="menu_item">Menu item</div>
+        <div class="menu_item">Settings</div>
+        <div class="menu_item">Profile</div>
+        <h1>HTML</h1>
+        <h2>Basics</h2>
+        <h3>3rd lesson</h3>
+        <h4>four</h4>
+        <a href="https://google.com" target="_blank" >Google</a>
+        <a href="https://googlewedewdwedew.com" target="_blank" >Google 2</a>
+        Hello!!!
+        <b class="my_class">bold </b>
+        <i>iiii</i>
+        <u>underlined</u>
+        <b>
+            Test 
+            <i>
+                iiii
+            </i>
+            <u>
+                <span id="my_span">bold underlined</span> 
+                <i>
+                    ddddddds
+                </i>
+            </u>
+        </b>
+        <!-- Comment -->
+        <p class="my_class">
+            Paragpaph 1
+
+
+
+            line 1 <br/> line2
+        </p>
+        <p>
+            <b>Paragpaph 2</b>
+        </p>
+        <ol>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+        </ol>
+        <!-- Unordered .... -->
+        <ul class="my_class">
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3 </li>
+            <li>item 4</li>           
+        </ul>
+        <table>
+            <tr>
+                <th scope="row">Chris</th>
+                <td>HTML tables</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <th scope="row">Dennis</th>
+                <td>Web accessibility</td>
+                <td>45</td>
+            </tr>
+        </table>
+        Text
+        <img
+            alt="Oranges"
+            src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg" 
+        />
+        Text
+        <img
+            alt="Cat"
+            src="./cat.jpg" 
+        />
+        Text
+        <div>
+            <p>p1</p>
+            <p>p2</p>
+        </div>
+        <input type="button" value="One more button" />
+    </body>
+</html>

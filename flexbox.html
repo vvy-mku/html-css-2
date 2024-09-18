@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Flexbox page</title>
+        <style>
+            body {
+                margin: 0;
+            }
+
+            .default_block {
+                width: 200px;
+                height: 100px;
+                background-color: black;
+                color: white;
+                margin: 1px;
+                float: left;
+            }
+
+            .flexbox {
+                display: flex;
+                flex-direction: row;
+                justify-content:center;
+                align-items:stretch;
+                gap:5px;
+                height: 100%;
+            }
+            
+            .flex_item {
+                background-color: blueviolet;
+            }
+
+            .sidebar {
+                width: 200px;
+            }
+            .main_block {
+                flex: 1;
+            }
+
+            .menu {
+                margin: 5px;
+                
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+            .menu_item {
+                background-color: antiquewhite;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                width: 100vw;
+                height: 100vh;
+            }
+
+            .wrapper_item {
+                background-color: azure;
+            }
+            .content {
+                flex: 1;
+            }
+
+            header{
+                height: 50px;
+            }
+
+            footer{
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="wrapper_item">Header</header>
+            <div  class="wrapper_item content">
+                <div class="flexbox">
+                    <div class="flex_item sidebar">
+                        <div class="menu">
+                            <div class="menu_item"><a href="http://google.com">Home</a></div>
+                            <div class="menu_item"><a href="http://google.com">Profile</a></div>
+                            <div class="menu_item"><a href="http://google.com">Settings</a></div>
+                        </div>
+                    </div>
+                    <div class="flex_item main_block">#2  Main content</div>
+                    <div class="flex_item sidebar">#3 Right sidebar</div>
+                </div>
+            </div>
+            <footer  class="wrapper_item">Footer</footer>
+        </div>
+
+    </body>
+</html>

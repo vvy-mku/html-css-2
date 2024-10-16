@@ -1,0 +1,532 @@
+<html>
+    <head>
+        <title>Landing page</title>
+        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+        <style>
+            body, h1, h2, p, ul {
+                font-family:"Inter";
+                margin: 0;
+                padding: 0;
+            }
+
+            .wrapper {
+                width: 100vw;
+                background-color: beige;
+                display: flex;
+                flex-direction: column;
+            }
+
+            header{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 20px 112px 20px 112px;
+                background-color: #FFFFFF;
+                border-bottom: 1px solid #E5E5E7;
+            }
+
+            .header_buttons {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 24px;
+                align-items: center;
+            }
+
+            a {
+                font-size: 15px;
+                font-weight: 600;
+                color: #0A77FF;
+                text-decoration: none;
+            }
+
+            button, input[type="submit"] {
+                background-color: #0A77FF;
+                border: none;
+                color: #FFFFFF;
+                padding: 12px 20px 12px 20px;
+                border-radius: 6px;
+            }
+
+            .menu {
+                display: flex;
+                flex-direction: row;
+                gap: 64px;
+            }
+
+            a.menu_item {
+                color: #323539;
+            }
+
+            .menu_items {
+                display: flex;
+                flex-direction: row;
+                gap: 32px;
+                align-items: center;
+            }
+
+            .workflow_block {
+                padding: 64px 112px 64px 112px;
+                display: flex;
+                flex-direction: column;
+                gap: 64px;
+                align-items: center;
+                background-color: #ffffff;
+            }
+
+            .workflow_header {
+                width: 800px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            h2 {
+                font-size: 32px;
+                font-weight: bold;
+                color: #323539;
+            }
+
+            .subtitle {
+                font-size: 18px;
+                color: #858C95;
+            }
+
+            .workflow_item {
+                width: 362px;
+            }
+
+            .workflow_item_title {
+                color: #323539;
+                font-size: 22px;
+                font-weight: bold;
+                margin-top: 20px;
+            }
+
+            .workflow_item_desc {
+                color: #858C95;
+                font-size: 16px;
+                margin-top: 12px;
+                margin-bottom: 16px;
+                line-height: 24px;
+            }
+
+            .workflow_content {
+                display: flex;
+                flex-direction: row;
+                gap: 64px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .card {
+                background-color: #EFEFF1;
+            }
+
+            h1 {
+                font-size: 52px;
+                line-height: 60px;
+            }
+
+            .card {
+                padding-left: 112px;
+                width: 576px;
+            }
+
+            .card_desc {
+                font-size: 18px;
+                color: #858C95;
+                line-height: 26px;
+                margin-top: 24px;
+                margin-bottom: 32px;
+            }
+
+            .used_by {
+                margin-top: 64px;
+                margin-bottom: 16px;
+                color: #323539;
+                font-size: 14px;
+            }
+
+            .company_logos {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .call_to_action {
+                display: flex;
+                flex-direction:column;
+                align-items: center;
+                padding: 64px 112px;
+                gap: 32px;
+                background-color: #0E69E2;
+                color: #ffffff;
+            }
+
+            .call_to_action h2 {
+                color: #ffffff;
+            }
+
+            .call_to_action_header {
+                text-align: center;
+            }
+            
+            .call_to_action p {
+                font-size: 14px;
+                margin-bottom: 8px;
+            }
+
+            .call_to_action_list {
+                display: flex;
+                flex-direction: row;
+                gap: 24px;
+            }
+
+            .call_to_action_input {
+                display: flex;
+                flex-direction: row;
+                width: 512px;
+            }
+
+            .call_to_action_input .text{
+                flex: 1;
+                border-top-left-radius: 6px;
+                border-bottom-left-radius: 6px;
+                border: 1px solid #E5E5E7;
+                padding: 12px 16px;
+                font-size: 15px;
+                color: #858C95;
+            }
+
+            .call_to_action .button {
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+            }
+
+            .call_to_action_list {
+                list-style-type: none;
+            }
+
+            .call_to_action_list li {
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                align-items: center;
+            }
+            footer {
+                padding: 64px 112px;
+                display: flex;
+                flex-direction: column;
+                gap: 48px;
+                background-color: #181818;
+                color: #979AA0;
+            }
+
+            .misc {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .misc .about {
+                width: 247px;
+            }
+
+            .misc .about img {
+                margin-bottom: 16px;
+            }
+
+            .misc .about p {
+                line-height: 24px;
+            }
+
+            footer .copyright {
+                padding-top: 24px;
+                border-top: 1px solid #323539;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .footer_menu {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .footer_menu p.footer_menu_title {
+                color: #F9F9F9;
+            }
+
+            .footer_menu ul {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                list-style-type: none;
+            }
+
+            .footer_menu ul li a {
+                font-size: 16px;
+                color: #979AA0;
+            }
+
+            .footer_form {
+                width: 302px;
+            }
+
+            .footer_form input[type="text"] {
+                background-color: #252525;
+                border: 1px solid #323539;
+                padding: 12px 16px;
+                border-top-left-radius: 6px;
+                border-bottom-left-radius: 6px;
+                font-size: 16px;
+                color: #979AA0;
+            }
+
+            .footer_form input[type="submit"] {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            .inputs {
+                display: flex;
+                flex-direction: row;
+                gap: 0;
+            }
+
+            .social {
+                display: flex;
+                gap: 24px;
+            }
+
+            @media screen and (max-width: 1100px) {
+                .misc{
+                    flex-wrap: wrap;
+                    gap: 48px;
+                }
+
+                .misc div {
+                    width: 320px;
+                }
+
+                .misc .resources_menu {
+                    order: 1;
+                }
+
+                .misc .products_menu {
+                    order: 2;
+                }
+
+                .misc .about {
+                    order: 3;
+                }
+
+                .misc .footer_form {
+                    order: 4;
+                }
+            }
+
+            /* @media screen and (max-width: 1100px) {
+                .misc{
+                    flex-wrap: wrap;
+                    gap: 48px;
+                }
+
+                .misc div {
+                    width: 320px;
+                }
+
+                .misc .about {
+                    width: 600px;
+                }
+
+                .misc .resources_menu {
+                    width: 140px;
+                }
+
+                .misc .products_menu {
+                    width: 140px;
+                }
+
+                .misc .footer_form {
+                    width: 600px;
+                }
+
+            }             */
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <div class="menu">
+                    <img src="./logo.png" alt="Company logo"/>
+                    <div class="menu_items">
+                        <a href="/home" class="menu_item">Home</a>
+                        <a href="/home" class="menu_item">Our products</a>
+                        <a href="/home" class="menu_item">Resources</a>
+                        <a href="/home" class="menu_item">Contacts</a>
+                    </div>
+                </div>
+                <div class="header_buttons">
+                    <a href="/signup">Sign Up</a>
+                    <button>Log In</button>
+                </div>
+            </header>
+            <div class="card">
+                <div class="content">
+                    <h1>Your Supercharged Design Workflow.</h1>
+                    <div class="card_desc">We’ve been told it is not possible to overachieve our customers’ expectations. We have not reinvented the wheel, we decided to build upon it.</div>
+                    <div>
+                        <button>Get started</button>
+                        <a href="/contact-us">Contact Us</a>
+                    </div>
+                    <p class="used_by">Used by companies like:</p>
+                    <div class="company_logos">
+                        <img src="./gitlab.svg" alt="gitlab" />
+                        <img src="./slack.svg" alt="slack" />
+                        <img src="./netflix.svg" alt="netflix" />
+                        <img src="./paypal.svg" alt="paypal" />
+                    </div>
+                </div>
+            </div>
+            <div class="workflow_block">
+                <div class="workflow_header">
+                    <h2>Streamlined Workflow</h2>
+                    <p class="subtitle">Here’s a quick overview of our main features and what we have to offer. For more in-depth reviews, browse around our website and articles.</p>
+                </div>
+                <div class="workflow_content">
+                    <div class="workflow_item">
+                        <img src="./easy_icon.svg" alt="icon" />
+                        <div class="workflow_item_title">Easier Work Organization</div>
+                        <div class="workflow_item_desc">Efficiently unleash cross-media information without cross-media value. Quickly timely deliverables for real-time schemas.</div>
+                        <a href="./learn-more">Learn more</a>
+                    </div>
+                    <div class="workflow_item">
+                        <img src="./fast_icon.svg" alt="icon" />
+                        <div class="workflow_item_title">Fast Connection</div>
+                        <div class="workflow_item_desc">Completely pursue scalable customer cross- media through potentialities. Holistically quickly installed portals.</div>
+                        <a href="./learn-more">Learn more</a>
+                    </div>
+                    <div class="workflow_item">
+                        <img src="./streamline_icon.svg" alt="icon" />
+                        <div class="workflow_item_title">Streamlined Processes</div>
+                        <div class="workflow_item_desc">Objectively innovate empowered scalable manufactured products whereas parallel platforms predominate extensible.</div>
+                        <a href="./learn-more">Learn more</a>
+                    </div>     
+                   <div class="workflow_item">
+                        <img src="./streamline_icon.svg" alt="icon" />
+                        <div class="workflow_item_title">Streamlined Processes</div>
+                        <div class="workflow_item_desc">Objectively innovate empowered scalable manufactured products whereas parallel platforms predominate extensible.</div>
+                        <a href="./learn-more">Learn more</a>
+                    </div>                                    
+                                       <div class="workflow_item">
+                        <img src="./streamline_icon.svg" alt="icon" />
+                        <div class="workflow_item_title">Streamlined Processes</div>
+                        <div class="workflow_item_desc">Objectively innovate empowered scalable manufactured products whereas parallel platforms predominate extensible.</div>
+                        <a href="./learn-more">Learn more</a>
+                    </div>                    <div class="workflow_item">
+                        <img src="./streamline_icon.svg" alt="icon" />
+                        <div class="workflow_item_title">Streamlined Processes</div>
+                        <div class="workflow_item_desc">Objectively innovate empowered scalable manufactured products whereas parallel platforms predominate extensible.</div>
+                        <a href="./learn-more">Learn more</a>
+                    </div> 
+                </div>
+            </div>
+            <div class="call_to_action">
+                <div class="call_to_action_header">
+                    <p>1% OF THE INDUSTRY</p>
+                    <h2>Welcome to your new digital reality. Now.</h2>
+                </div>
+                <div class="call_to_action_input">
+                    <input type="text" class="text" value="Enter Your Email" />
+                    <input type="submit" class="button" value="Submit" />
+                </div>
+                <ul class="call_to_action_list">
+                    <li>
+                        <img src="./check.svg" alt="Check"/>
+                        Instant results
+                    </li>
+                    <li>
+                        <img src="./check.svg" alt="Check"/>
+                        User-friendly interface
+                    </li>
+                    <li>
+                        <img src="./check.svg" alt="Check"/>
+                        Personalized customization
+                    </li>
+                </ul>
+            </div>
+            <footer>
+                <div class="misc">
+                    <div class="about">
+                        <img src="./logo_black.svg" alt="logo"/>
+                        <p>Design outstanding interfaces with advanced Figma features in a matter of minutes.</p>
+                    </div>
+                    <div class="footer_menu resources_menu">
+                        <p class="footer_menu_title">Resources</p>
+                        <ul>
+                            <li>
+                                <a href="/community">Community</a>
+                            </li>
+                            <li>
+                                <a href="/events">Events</a>
+                            </li>
+                            <li>
+                                <a href="/help_center">Help Center</a>
+                            </li>
+                            <li>
+                                <a href="/partners">Partners</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_menu products_menu">
+                        <p class="footer_menu_title">Products</p>
+                        <ul>
+                            <li>
+                                <a href="/integrations">Integrations</a>
+                            </li>
+                            <li>
+                                <a href="/solutions">Solutions</a>
+                            </li>
+                            <li>
+                                <a href="/features">Features</a>
+                            </li>
+                            <li>
+                                <a href="/enterprise">Enterprise</a>
+                            </li>
+                        </ul>                        
+                    </div>
+                    <div class="footer_menu footer_form">
+                        <p class="footer_menu_title">Get Email Notifications</p>
+                        <p>Sign up to our e-mail newsletter to receive the latest news & updates.</p>
+                        <div class="inputs">
+                            <input type="text" class="text" value="Enter Your Email" />
+                            <input type="submit" class="button" value="Submit" />
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>© 2023 Lookscout. All Rights Reserved.</p>
+                    <div class="social">
+                        <a href="https://facebook.com">
+                            <img src="./fb.svg" alt="Facebook" />
+                        </a>
+                        <a href="https://google.com">
+                            <img src="./gl.svg" alt="Google" />
+                        </a>
+                        <a href="https://apple.com">
+                            <img src="./al.svg" alt="Apple" />
+                        </a>
+                        <a href="https://instagram.com">
+                            <img src="./ig.svg" alt="Instagram" />
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
